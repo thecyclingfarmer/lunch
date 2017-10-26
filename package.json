@@ -1,16 +1,16 @@
 {
-  "_from": "lunch-decisions",
-  "_id": "lunch-decisions@1.0.4",
+  "_from": "lunch",
+  "_id": "lunch@1.0.4",
   "_inBundle": false,
   "_integrity": "sha1-mscUg6S/Cdja+rgoTp83stqRZOQ=",
-  "_location": "/lunch-decisions",
+  "_location": "/lunch",
   "_phantomChildren": {},
   "_requested": {
     "type": "tag",
     "registry": true,
-    "raw": "lunch-decisions",
-    "name": "lunch-decisions",
-    "escapedName": "lunch-decisions",
+    "raw": "lunch",
+    "name": "lunch",
+    "escapedName": "lunch",
     "rawSpec": "",
     "saveSpec": null,
     "fetchSpec": "latest"
@@ -18,24 +18,23 @@
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/lunch-decisions/-/lunch-decisions-1.0.4.tgz",
   "_shasum": "9ac71483a4bf09d8dafab8284e9f37b2da9164e4",
-  "_spec": "lunch-decisions",
+  "_spec": "lunch",
   "_where": "/private/etc",
   "author": {
-    "name": "Kyle Luck"
+    "name": "Thecyclingfarmer"
   },
   "bin": {
-    "lunch-decisions": "bin.js"
+    "lunch": "bin.js"
   },
   "bundleDependencies": false,
   "deprecated": false,
-  "description": "Tired of making lunch decisions while at DigitalCrafts",
+  "description": "",
   "keywords": [
-    "DigitalCrafts"
+    ""
   ],
   "license": "ISC",
-  "name": "lunch-decisions",
+  "name": "lunch",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
