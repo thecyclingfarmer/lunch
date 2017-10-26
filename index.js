@@ -1,24 +1,49 @@
-var lunchOptions = [
-	"Ölerian",
-	"Greesy spoon",
-	"Chokladfabriken",
-	"Dellselius",
-	"Omnipollo",
-	"Gossip",
-	"TacoBar",
-	"Deli Di Luca",
-	"Lily's burger",
-	"Amida kolgrill"
-];
+var express = require('express');
+var app = express();
 
-var lunchChoice = Math.floor(Math.random() * lunchOptions.length);
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-module.exports = function() {
-	// if Tuesday, default to Lovies as Tuesday is 20% off
-	var d = new Date();
+app.set('port', (process.env.PORT || 9001));
+
+app.get('/', function(req, res){
+  res.send('It works!');
+});
+
+app.get('/lunch', function(req, res){
+  var lunchOptions = [
+  	'Ölerian',
+  	'Greesy spoon',
+  	'Chokladfabriken',
+  	'Dellselius',
+  	'Omnipollo',
+  	'Gossip',
+  	'TacoBar',
+  	'Deli Di Luca',
+  	'Lily\'s burger',
+  	'Amida kolgrill'
+  ];
+
+  var lunchChoice = Math.floor(Math.random() * lunchOptions.length);
+
+  // if Tuesday, default to Lovies as Tuesday is 20% off
+  var lunchText = '';
+  var d = new Date();
 	var today = d.getDay();
 	if (today === 5) {
-		return "It's Friyay! Beer o clock!";
+		lunchText = 'It\'s Friyay! Beer o clock! Omnipollo it is!';
 	}
-  return "Your choice for lunch is: " + lunchOptions[lunchChoice];
-};
+  lunchText = 'Your choice for lunch is: ' + lunchOptions[lunchChoice];
+
+  var body = {
+    response_type: 'in_channel',
+    text: lunchText
+  };
+
+  res.send(body);
+});
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
