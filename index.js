@@ -38,7 +38,7 @@ app.post('/lunch', function(req, res){
 		lunchText = 'It\'s Friyay! Beer o clock! Omnipollo it is!';
 	}
 
-  lunchText = req.text + 'Your choice for lunch is: ' + lunchOptions[lunchChoice];
+  lunchText = req + 'Your choice for lunch is: ' + lunchOptions[lunchChoice];
 
   if (req.text && req.text.indexOf('--force') == 0) {
     var forceParam = req.text.replace('--force', '');
