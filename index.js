@@ -16,11 +16,14 @@ app.get('/lunch', function(req, res){
   	'Ölerian',
   	'Greesy spoon',
   	'Chokladfabriken',
-  	'Dellselius',
   	'Omnipollo',
   	'Gossip',
   	'TacoBar',
-  	'Deli Di Luca',
+    'Ai Ramen',
+    'Urban deli',
+    'Indien 1',
+    'Indien 2',
+    'Thai-kiosken',
   	'Lily\'s burger',
   	'Amida kolgrill'
   ];
