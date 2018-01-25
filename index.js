@@ -37,7 +37,17 @@ app.post('/lunch', function(req, res){
 	if (today === 5) {
 		lunchText = 'It\'s Friyay! Beer o clock! Omnipollo it is!';
 	}
+
   lunchText = 'Your choice for lunch is: ' + lunchOptions[lunchChoice];
+
+  if (req.text && req.text.indexOf('--force') == 0) {
+    var forceParam = req.text.replace('--force', '');
+    for (var i = 0; i < lunchOptions.lenght; i++) {
+      if (forceParam == lunchOptions[i]) {
+        lunchText = 'Ok! Are you sure? ⭐️' + lunchOptions[i] + '⭐️ it is!';
+      }
+    }
+  }
 
   var body = {
     response_type: 'in_channel',
