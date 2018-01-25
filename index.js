@@ -41,7 +41,8 @@ app.post('/lunch', function(req, res){
     lunchText = '';
     var forceParam = req.body.text.replace('--force', '');
     for (var i = 0; i < lunchOptions.length; i++) {
-      if (forceParam === lunchOptions[i]) {
+      lunchText = lunchText + '\n' + lunchOptions[i].indexOf(forceParam);
+      if (lunchOptions[i].indexOf(forceParam) > -1) {
         lunchText = lunchText + '\n' + forceParam + ' ' + lunchOptions[i];
         //lunchText = 'Ok! Are you sure? ⭐️' + lunchOptions[i] + '⭐️ it is!';
       }
