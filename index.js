@@ -30,15 +30,12 @@ app.post('/lunch', function(req, res){
 
   var lunchChoice = Math.floor(Math.random() * lunchOptions.length);
 
-  // if Tuesday, default to Lovies as Tuesday is 20% off
-  var lunchText = '';
+  var lunchText = 'Your choice for lunch is: ' + lunchOptions[lunchChoice];
   var d = new Date();
 	var today = d.getDay();
 	if (today === 5) {
 		lunchText = 'It\'s Friyay! Beer o clock! Omnipollo it is!';
 	}
-
-  lunchText = 'Your choice for lunch is: ' + lunchOptions[lunchChoice];
 
   if (req.body.text && req.body.text.indexOf('--force') == 0) {
     var forceParam = req.body.text.replace('--force', '');
