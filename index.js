@@ -39,7 +39,7 @@ app.post('/lunch', function(req, res){
 
   if (req.body.text && req.body.text.indexOf('--force') == 0) {
     lunchText = '';
-    var forceParam = req.body.text.replace('--force', '');
+    var forceParam = req.body.text.replace('--force ', '');
     for (var i = 0; i < lunchOptions.length; i++) {
       lunchText = lunchText + '\n' + lunchOptions[i].indexOf(forceParam);
       if (lunchOptions[i].indexOf(forceParam) > -1) {
