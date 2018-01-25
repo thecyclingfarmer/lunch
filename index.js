@@ -11,7 +11,7 @@ app.get('/', function(req, res){
   res.send('It works!');
 });
 
-app.get('/lunch', function(req, res){
+app.post('/lunch', function(req, res){
   var lunchOptions = [
   	'Ölerian',
   	'Greesy spoon',
