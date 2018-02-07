@@ -13,7 +13,8 @@ app.get('/', function(req, res){
 
 app.post('/lunch', function(req, res){
   var lunchOptions = [
-  	'Ölerian',
+    'Cafe gulahuset i Brålanda',
+    'Ölerian',
   	'Greesy spoon',
   	'Chokladfabriken',
   	'Omnipollo',
