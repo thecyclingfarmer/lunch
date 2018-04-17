@@ -17,16 +17,21 @@ app.post('/lunch', function(req, res){
     'Ölerian',
   	'Greesy spoon',
   	'Chokladfabriken',
-  	'Omnipollo',
+    'Blå dörren',
+    'BC Burger',
+    'Omnipollo',
   	'Gossip',
   	'TacoBar',
     'Ai Ramen',
     'Urban deli',
+    'BC Burger',
     'Indien 1',
     'Indien 2',
     'Thai-kiosken',
   	'Lily\'s burger',
-  	'Amida kolgrill'
+  	'Amida kolgrill',
+    'BC Burger',
+    'Prime'
   ];
 
   var lunchChoice = Math.floor(Math.random() * lunchOptions.length);
